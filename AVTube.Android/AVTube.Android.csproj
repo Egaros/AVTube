@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B64FE5D5-F15B-40F9-8959-6AA324E2AE4C}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AVTube.Android</RootNamespace>
+    <AssemblyName>AVTube.Android</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\11\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="policy.2.0.taglib-sharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
+      <HintPath>..\packages\taglib.2.1.0.0\lib\policy.2.0.taglib-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="taglib-sharp, Version=2.1.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
+      <HintPath>..\packages\taglib.2.1.0.0\lib\taglib-sharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AVTube\.NetFileDownloader\CompletedState.cs">
+      <Link>.NetFileDownloader\CompletedState.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\.NetFileDownloader\DownloadFileCompletedArgs.cs">
+      <Link>.NetFileDownloader\DownloadFileCompletedArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\.NetFileDownloader\DownloadFileProgressChangedArgs.cs">
+      <Link>.NetFileDownloader\DownloadFileProgressChangedArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\.NetFileDownloader\DownloadWebClient.cs">
+      <Link>.NetFileDownloader\DownloadWebClient.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\.NetFileDownloader\EventHandlerExtensions.cs">
+      <Link>.NetFileDownloader\EventHandlerExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\.NetFileDownloader\FileDownloader.cs">
+      <Link>.NetFileDownloader\FileDownloader.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\.NetFileDownloader\FileHelpers.cs">
+      <Link>.NetFileDownloader\FileHelpers.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\.NetFileDownloader\IDnsFallbackResolver.cs">
+      <Link>.NetFileDownloader\IDnsFallbackResolver.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\.NetFileDownloader\IDownloadCache.cs">
+      <Link>.NetFileDownloader\IDownloadCache.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\.NetFileDownloader\IFileDownloader.cs">
+      <Link>.NetFileDownloader\IFileDownloader.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\.NetFileDownloader\IStreamCopyWorker.cs">
+      <Link>.NetFileDownloader\IStreamCopyWorker.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\.NetFileDownloader\Logging\ILogger.cs">
+      <Link>.NetFileDownloader\Logging\ILogger.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\.NetFileDownloader\Logging\LoggerFacade.cs">
+      <Link>.NetFileDownloader\Logging\LoggerFacade.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\.NetFileDownloader\StreamCopyCompleteEventArgs.cs">
+      <Link>.NetFileDownloader\StreamCopyCompleteEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\.NetFileDownloader\StreamCopyProgressEventArgs.cs">
+      <Link>.NetFileDownloader\StreamCopyProgressEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\.NetFileDownloader\StreamCopyWorker.cs">
+      <Link>.NetFileDownloader\StreamCopyWorker.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\.NetFileDownloader\WebHeaderCollectionExtensions.cs">
+      <Link>.NetFileDownloader\WebHeaderCollectionExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\ccMixterExtractor\ccMixterExtractor.cs">
+      <Link>ccMixterExtractor\ccMixterExtractor.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\ccMixterSearch\ccMixterSearch.cs">
+      <Link>ccMixterSearch\ccMixterSearch.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\ccMixterSearch\ccMixterSearchComponents.cs">
+      <Link>ccMixterSearch\ccMixterSearchComponents.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\DailymotionExtractor\DailymotionExtractor.cs">
+      <Link>DailymotionExtractor\DailymotionExtractor.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\DailymotionSearch\DailymotionSearch.cs">
+      <Link>DailymotionSearch\DailymotionSearch.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\DailymotionSearch\DailymotionSearchComponents.cs">
+      <Link>DailymotionSearch\DailymotionSearchComponents.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\Download\Download.cs">
+      <Link>Download\Download.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\EroprofileExtractor\EroprofileExtractor.cs">
+      <Link>EroprofileExtractor\EroprofileExtractor.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\EroprofileSearch\EroprofileSearch.cs">
+      <Link>EroprofileSearch\EroprofileSearch.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\EroprofileSearch\EroprofileSearchComponents.cs">
+      <Link>EroprofileSearch\EroprofileSearchComponents.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\FacebookVideoExtractor\FacebookVideoExtractor.cs">
+      <Link>FacebookVideoExtractor\FacebookVideoExtractor.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\Helper\Helper.cs">
+      <Link>Helper\Helper.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\InstagramPictureExtractor\InstagramPictureExtractor.cs">
+      <Link>InstagramPictureExtractor\InstagramPictureExtractor.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\InstagramVideoExtractor\InstagramVideoExtractor.cs">
+      <Link>InstagramVideoExtractor\InstagramVideoExtractor.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\Log\Log.cs">
+      <Link>Log\Log.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\Metadata\Metadata.cs">
+      <Link>Metadata\Metadata.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\PornhubExtractor\PornhubExtractor.cs">
+      <Link>PornhubExtractor\PornhubExtractor.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\PornhubSearch\PornhubSearch.cs">
+      <Link>PornhubSearch\PornhubSearch.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\PornhubSearch\PornhubSearchComponents.cs">
+      <Link>PornhubSearch\PornhubSearchComponents.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\VimeoExtractor\VimeoExtractor.cs">
+      <Link>VimeoExtractor\VimeoExtractor.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\VimeoSearch\VimeoSearch.cs">
+      <Link>VimeoSearch\VimeoSearch.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\VimeoSearch\VimeoSearchComponents.cs">
+      <Link>VimeoSearch\VimeoSearchComponents.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\Web\Web.cs">
+      <Link>Web\Web.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\xHamsterExtractor\xHamsterExtractor.cs">
+      <Link>xHamsterExtractor\xHamsterExtractor.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\xHamsterExtractor\xHamsterExtractorComponents.cs">
+      <Link>xHamsterExtractor\xHamsterExtractorComponents.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\xHamsterSearch\xHamsterSearch.cs">
+      <Link>xHamsterSearch\xHamsterSearch.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\xHamsterSearch\xHamsterSearchComponents.cs">
+      <Link>xHamsterSearch\xHamsterSearchComponents.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\YouTubeExtractor\AdaptiveType.cs">
+      <Link>YouTubeExtractor\AdaptiveType.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\YouTubeExtractor\AudioType.cs">
+      <Link>YouTubeExtractor\AudioType.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\YouTubeExtractor\Decipherer.cs">
+      <Link>YouTubeExtractor\Decipherer.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\YouTubeExtractor\DownloadUrlResolver.cs">
+      <Link>YouTubeExtractor\DownloadUrlResolver.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\YouTubeExtractor\HttpHelper.cs">
+      <Link>YouTubeExtractor\HttpHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\YouTubeExtractor\VideoInfo.cs">
+      <Link>YouTubeExtractor\VideoInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\YouTubeExtractor\VideoNotAvailableException.cs">
+      <Link>YouTubeExtractor\VideoNotAvailableException.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\YouTubeExtractor\VideoType.cs">
+      <Link>YouTubeExtractor\VideoType.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\YouTubeExtractor\YoutubeParseException.cs">
+      <Link>YouTubeExtractor\YoutubeParseException.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\YouTubeSearch\YouTubeSearch.cs">
+      <Link>YouTubeSearch\YouTubeSearch.cs</Link>
+    </Compile>
+    <Compile Include="..\AVTube\YouTubeSearch\YouTubeSearchComponents.cs">
+      <Link>YouTubeSearch\YouTubeSearchComponents.cs</Link>
+    </Compile>
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
