@@ -10,18 +10,14 @@ Search and download songs and videos from YouTube, Vimeo, Dailymotion, ccMixter,
 
 + .NET Framework 4.5 and higher
 + MONO (Windows, MacOS, Linux)
-Windows Phone 8
-WinRT
-Xamarin.Android
-Xamarin.iOS
-ASP.NET (Web)
++ Windows Phone 8
++ WinRT
++ Xamarin.Android
++ Xamarin.iOS
++ ASP.NET (Web)
 
 # Dependencies
 
-Newtonsoft.Json
-taglib-sharp
-ICSharpCode.SharpZipLib
-
-# Copyright & License
-
-Copyright (c) 2018 Torsten Klinger
++ Newtonsoft.Json
++ taglib-sharp
++ ICSharpCode.SharpZipLib
