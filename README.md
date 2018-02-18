@@ -8,8 +8,8 @@ Search and download songs and videos from YouTube, Vimeo, Dailymotion, ccMixter,
 
 # Target plaforms
 
-.NET Framework 4.5 and higher
-MONO (Windows, MacOS, Linux)
++ .NET Framework 4.5 and higher
++ MONO (Windows, MacOS, Linux)
 Windows Phone 8
 WinRT
 Xamarin.Android
@@ -25,5 +25,3 @@ ICSharpCode.SharpZipLib
 # Copyright & License
 
 Copyright (c) 2018 Torsten Klinger
-
-Licensed under GNU Lesser General Public License. Please read the LICENSE file.
