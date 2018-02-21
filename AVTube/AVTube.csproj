@@ -85,6 +85,7 @@
     <Compile Include="InstagramVideoExtractor\InstagramVideoExtractor.cs" />
     <Compile Include="Metadata\Metadata.cs" />
     <Compile Include="PornhubExtractor\PornhubExtractor.cs" />
+    <Compile Include="PornhubExtractor\PornhubExtractorComponents.cs" />
     <Compile Include="PornhubSearch\PornhubSearch.cs" />
     <Compile Include="PornhubSearch\PornhubSearchComponents.cs" />
     <Compile Include="VimeoExtractor\VimeoExtractor.cs" />

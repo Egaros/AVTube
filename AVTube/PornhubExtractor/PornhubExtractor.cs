@@ -17,14 +17,19 @@
 // along with AVTube. If not, see<http://www.gnu.org/licenses/>.
 
 using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace AVTube
 {
     public static class PornhubExtractor
     {
-        public static string DownloadUrl(string Url)
+        static List<PornhubExtractorComponents> items;
+
+        public static List<PornhubExtractorComponents> Query(string Url)
         {
+            items = new List<PornhubExtractorComponents>();
+
             string content = Web.getContentFromUrlWithProperty(Url);
 
             if (Log.getMode())
@@ -34,12 +39,18 @@ namespace AVTube
             string pattern = "720\",\"videoUrl\":\".*?\"";
             MatchCollection result = Regex.Matches(content, pattern, RegexOptions.Singleline);
 
+            String TITLE = string.Empty;
             String URL = String.Empty;
 
             for (int ctr = 0; ctr <= result.Count - 1; ctr++)
             {
                 if (Log.getMode())
                     Log.println("Match: " + content);
+
+                TITLE = Helper.ExtractValue(content, "\"video_title\":\"", "\",\"");
+
+                if (Log.getMode())
+                    Log.println("Title : " + TITLE);
 
                 URL = result[ctr].Value.Replace("\\", "").Replace("720\",\"videoUrl\":\"", "")
                     .Replace("\"", "");
@@ -49,9 +60,13 @@ namespace AVTube
 
                 if (Log.getMode())
                     Log.println("********************************");
+
+                PornhubExtractorComponents comp = new PornhubExtractorComponents (TITLE, URL);
+
+                items.Add(comp);
             }
 
-            return URL;
+            return items;
         }
     }
 }

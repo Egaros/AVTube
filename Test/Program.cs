@@ -136,9 +136,13 @@ namespace Test
 
             #region PornhubExtractor
 
-            //var url = "https://de.pornhub.com/view_video.php?viewkey=ph5a71e343c13ac";
+            //var items = PornhubExtractor.Query("https://de.pornhub.com/view_video.php?viewkey=ph5a71e343c13ac");
 
-            //Console.WriteLine(PornhubExtractor.DownloadUrl(url));
+            //foreach (var item in items)
+            //{
+            //    Console.WriteLine(item.getTitle());
+            //    Console.WriteLine(item.getUrl());
+            //}
 
             #endregion
 
