@@ -71,7 +71,11 @@ namespace AVTube
                     if (Log.getMode())
                         Log.println("Match: " + result_[ctr_].Value);
 
-                    url_ = Helper.ExtractValue(result_[ctr_].Value, "fps\":24,\"url\":\"", "\",\"cdn\":\"level3");
+                    url_ = Helper.ExtractValue(result_[ctr_].Value, "fps\":", "\",\"cdn\":\"level3");
+
+                    url_ = url_ + "\"";
+
+                    url_ = Helper.ExtractValue(url_, "url\":\"", "\"");
                 }
 
                 if (Log.getMode())

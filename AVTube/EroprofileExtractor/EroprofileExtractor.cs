@@ -26,6 +26,9 @@ namespace AVTube
         {
             string content = Web.getContentFromUrl(Url);
 
+            if (Log.getMode())
+                Log.println("Content : " + content);
+
             String URL = Helper.ExtractValue(content, "<source src=\"", "\"").Replace("amp;", "");
 
             if (Log.getMode())
